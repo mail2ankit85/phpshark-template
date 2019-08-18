@@ -1,0 +1,59 @@
+{% extends "base-dialog-center.html" %}
+
+{% block messages %}
+    {% if ( ind != null and ind == true  ) %}
+        <div class="p-3">
+
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Success!</strong> Thank you for registering with us. 
+                A confirmation link has been sent to your registered email address. Please check your email.
+            </div>
+
+        </div>
+    {% endif %}
+
+    {% if ( ind != null and ind == false ) %}
+    <div class="p-3">
+
+            <div class="alert alert-danger alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Error!</strong> Sorry! There seems to be some error with registration process. Please check the mandatory fields.
+            </div>
+
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+            <div class="col-md-6">
+
+                <div class="form-heading my-3 p-2"> 
+                    <h3 class="d-flex justify-content-center">Register</h3>
+                    <h6 class="d-flex justify-content-center">Create your account with us</h6>
+                </div>
+
+                <hr/>
+
+                {% include 'form-register.html' %}
+            </div>
+            
+            <div class="col-md-6">
+
+                <div class="form-heading my-3 p-2"> 
+                    <h3 class="d-flex justify-content-center">Login</h3>
+                    <h6 class="d-flex justify-content-center">Login to your account</h6>
+                </div>
+
+                <hr/>
+                
+                {% include 'form-login.html' %}
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
+

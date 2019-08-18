@@ -1,0 +1,43 @@
+<form id="register-form" method="post" action="">
+
+<div class="form-body my-3 p-2">
+    <div class="form-row">
+        <div class="col-md-6 offset-md-3">
+                <div class="form-group">
+                    <label class="form-label" for="email">Email<span class="mandatory">*</span>:</label>
+                    <input id="email" type="email" name="email" class="form-control"/>
+                </div>
+
+                <div class='form-group'>
+                    <label class='form-label' for='firstname'>Firstname<span class="mandatory">*</span>:</label>
+                    <input id='firstname' type='text' name='firstname' class='form-control' />
+                </div>
+
+                <div class='form-group'>
+                    <label class='form-label' for='lastname'>Lastname<span class="mandatory">*</span>:</label>
+                    <input id='lastname' type='text' name='lastname' class='form-control'/>
+                </div>
+
+                <div class='form-group'>
+                    <label class='form-label' for='phone'>Phone:</label>
+                    <input id='phone' type='text' name='phone' class='form-control'/>
+                </div>
+
+                <div class="form-group d-flex flex-column justify-content-between">
+                    <a href="{{ resend_url }}" class="align-self-center">Resend confirmation link</a>
+                </div>
+
+                <!-- <div class="form-group d-flex flex-column justify-content-center">
+                    <div id="g-recaptcha"></div>
+                </div> -->
+
+                <input class="d-none" name="form" type="text" value="register" />
+
+                <div class="form-group d-flex justify-content-center mt-5">
+                    <button id="submitbtn" class="btn btn-primary" type="submit" value="Register">Register your account</button>
+                </div>
+        </div>
+    </div>
+</div>
+
+</form>

@@ -1,0 +1,37 @@
+{% extends "base-dialog-center.html" %}
+
+{% block messages %}
+        {% if ( ind != null and ind == true ) %}
+            <div class="p-3">
+
+                <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Success!</strong> A new confirmation link has been send to your account for email confirmation.
+                </div>
+
+            </div>
+        {% endif %}
+
+        {% if ( ind != null and ind == false ) %}
+            <div class="p-3">
+
+                <div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Error!</strong> Your email ID is already confirmed. Please try <a href="{{ forgot_url }}">resetting</a> you password. 
+                </div>
+
+            </div>
+        {% endif %}
+{% endblock %}
+
+{% block body %}
+    <div class="form-heading my-3 p-2"> 
+        <h3 class="d-flex justify-content-center">Confirmation Resend</h3>
+        <h6 class="d-flex justify-content-center">(PS: Valid if you email is registered by unconfirmed.)</h6>
+    </div>
+    <hr/>
+
+    {% include 'form-confirmation-resend.html' %}
+
+{% endblock %}
+
