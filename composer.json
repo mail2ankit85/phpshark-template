@@ -2,7 +2,7 @@
     "name": "ankit.kumar/phpshark-plugin",
     "description": "PHPshark Plugin is an MVC Development of Word Press Plugin",
     "type": "project",
-    "license": "Commercial Lisence",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Ankit Kumar",
